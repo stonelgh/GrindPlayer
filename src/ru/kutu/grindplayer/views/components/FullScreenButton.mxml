@@ -10,6 +10,9 @@
 	
 	<fx:Script>
 		<![CDATA[
+
+            import ru.kutu.grind.config.PlayerConfiguration;
+            import ru.kutu.grindplayer.utils.utils;
 			
 			public function set fullScreen(value:Boolean):void {
 				currentState = value ? "fullscreen" : "normal";

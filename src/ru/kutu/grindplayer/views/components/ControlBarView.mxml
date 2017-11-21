@@ -9,6 +9,9 @@
 	<fx:Script>
 		<![CDATA[
 			
+            import ru.kutu.grind.config.PlayerConfiguration;
+            import ru.kutu.grindplayer.utils.utils;
+
 			private var isFullScreen:Boolean;
 			private var _shown:Boolean;
 			
@@ -23,6 +26,7 @@
 			
 			public function get shown():Boolean { return _shown }
 			public function set shown(value:Boolean):void {
+                value = PlayerConfiguration.enableControlBar && value;
 				if (value == _shown) return;
 				_shown = value;
 				updateState();

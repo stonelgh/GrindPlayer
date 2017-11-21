@@ -5,7 +5,6 @@ package ru.kutu.grindplayer.config {
 	public class GrindPlayerConfiguration extends PlayerConfiguration {
 
 		public var tintColor:Number;
-
 	}
 
 }
