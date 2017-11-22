@@ -1,6 +1,6 @@
 package ru.kutu.grindplayer.views.mediators {
 	
-	import by.blooddy.crypto.serialization.JSON;
+	import by.blooddy.crypto.serialization.*;
 	
 	import org.osmf.events.MediaElementEvent;
 	import org.osmf.events.PlayEvent;
@@ -66,7 +66,7 @@ package ru.kutu.grindplayer.views.mediators {
 				var subtitles:Object;
 				if (subtitlesSource && subtitlesSource.length) {
 					try {
-						subtitles = JSON.decode(subtitlesSource);
+						subtitles = by.blooddy.crypto.serialization.JSON.decode(subtitlesSource);
 						if ("config" in subtitles) {
 							view.setConfig(subtitles.config);
 						}
